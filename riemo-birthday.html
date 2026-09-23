@@ -1,6 +1,111 @@
 <!doctype html>
-<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>إلى ريمو 🤍</title><style>
-:root{--ink:#402735;--rose:#e86f92;--dark:#b7466d}*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;background:radial-gradient(circle at 15% 10%,#ffe1ea 0 12%,transparent 30%),linear-gradient(145deg,#fffaf7,#ffeef3 55%,#fce1ec);min-height:100vh}.wrap{width:min(1000px,92%);margin:auto;padding:28px 0 55px}.top{display:flex;justify-content:space-between;opacity:.8}.pill,.unit,.card,.reason{background:#ffffff9c;border:1px solid #fff;box-shadow:0 15px 40px #9a52631c}.pill{padding:9px 14px;border-radius:999px}.hero{min-height:74vh;display:grid;place-items:center;text-align:center}.heart{font-size:4rem;animation:float 3s ease-in-out infinite}.eyebrow{color:var(--dark);font-weight:bold}h1{font-size:clamp(3.3rem,12vw,7.5rem);line-height:.95;margin:14px 0;font-weight:900}h1 span{color:var(--rose);text-shadow:5px 7px 0 #ffffffb5}.lead{font-size:clamp(1.05rem,2.5vw,1.35rem);line-height:1.9;max-width:600px}.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px 0 30px}.unit{min-width:82px;padding:14px 12px;border-radius:20px}.unit b{display:block;font-size:1.8rem;color:var(--dark)}.unit small{opacity:.7}button{border:0;cursor:pointer;color:#fff;font:inherit;background:linear-gradient(135deg,var(--rose),var(--dark));padding:14px 24px;border-radius:999px;box-shadow:0 12px 25px #b7466d3d}.card{border-radius:30px;padding:clamp(24px,5vw,52px);margin:26px 0;text-align:center}.letter{display:none;line-height:2.1;font-size:1.1rem}.letter.show{display:block}.letter h2,.quote{color:var(--dark)}.quote{font-size:clamp(1.4rem,3vw,2rem);line-height:1.8}.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.reason{padding:24px 18px;border-radius:22px;text-align:center}.reason .ico{font-size:2rem}.reason p{line-height:1.7;opacity:.8;font-size:.94rem}footer{text-align:center;opacity:.6;margin-top:30px}.float-heart{position:fixed;bottom:-30px;animation:rise 7s linear forwards}@keyframes float{50%{transform:translateY(-11px) rotate(3deg)}}@keyframes rise{0%{transform:translateY(0);opacity:0}15%{opacity:.7}100%{transform:translateY(-110vh) scale(1.4) rotate(35deg);opacity:0}}@media(max-width:650px){.reasons{grid-template-columns:1fr}}
-</style></head><body><main class="wrap"><div class="top"><b>هدية صغيرة من قلب كبير</b><div class="pill">إلى ريمو 🤍</div></div><div class="hero"><div><div class="heart">♡</div><div class="eyebrow">في يومك المميز، حبيت أقولك...</div><h1>يا <span>ريمو</span></h1><p class="lead">وجودك في حياتي مش مجرد صدفة حلوة؛ إنتِ الحتة اللي بتخلّي كل يوم أحنّ وأجمل.</p><div class="countdown"><div class="unit"><b id="d">--</b><small>يوم</small></div><div class="unit"><b id="h">--</b><small>ساعة</small></div><div class="unit"><b id="m">--</b><small>دقيقة</small></div><div class="unit"><b id="s">--</b><small>ثانية</small></div></div><button id="open">افتحي رسالتي ✨</button></div></div><section id="letter" class="card letter"><h2>ريمو حبيبتي،</h2><p>كل سنة وإنتِ أقرب حد لقلبي. أتمنى سنتك الجديدة تكون شبهك: جميلة، دافية، مليانة ضحك وحاجات حلوة تستاهليها.</p><p>أنا ممتن لكل لحظة بتجمعنا، ولكل تفصيلة صغيرة فيكِ خلتني أحبك أكتر من غير ما أحس.</p><p>عيد ميلاد سعيد يا ريماس... ويا أجمل ريمو في الدنيا. بحبك قد كل الحاجات الحلوة اللي لسه مستنيانا 🤍</p></section><section class="card quote">«إنتِ مش بس حبيبتي... إنتِ البيت اللي قلبي بيرتاح فيه.»</section><section class="reasons"><div class="reason"><div class="ico">🌷</div><h3>ضحكتك</h3><p>بتعرف تغيّر شكل اليوم كله في ثانية.</p></div><div class="reason"><div class="ico">✨</div><h3>روحك</h3><p>فيها طيبة وحنية مفيش زيهم.</p></div><div class="reason"><div class="ico">🫶</div><h3>وجودك</h3><p>أجمل حاجة حصلتلي ولسه بتتكرر كل يوم.</p></div></section><footer>صُنعت بحب مخصوص لريمو • كل سنة وإنتِ طيبة 🤍</footer></main><script>
-const birthday=new Date('2026-09-30T00:00:00');const openButton=document.getElementById('open');const letter=document.getElementById('letter');function tick(){let x=Math.max(0,birthday-new Date());['d','h','m','s'].forEach((id,i)=>document.getElementById(id).textContent=String([Math.floor(x/86400000),Math.floor(x/3600000)%24,Math.floor(x/60000)%60,Math.floor(x/1000)%60][i]).padStart(2,'0'))}tick();setInterval(tick,1000);openButton.addEventListener('click',()=>{letter.classList.add('show');letter.scrollIntoView({behavior:'smooth'});for(let i=0;i<15;i++)setTimeout(()=>{let e=document.createElement('span');e.className='float-heart';e.textContent='♥';e.style.left=Math.random()*100+'vw';e.style.color='#e86f92';document.body.append(e);setTimeout(()=>e.remove(),7000)},i*80)});
-</script></body></html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>إلى ريمو 🤍</title>
+  <meta name="description" content="هدية صغيرة لريمو في يومها المميز" />
+  <style>
+    :root { --ink:#402735; --rose:#e86f92; --rose-dark:#b7466d; --cream:#fff8f4; --gold:#e8b86a; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); font-family:Tahoma,"Segoe UI",sans-serif; background:radial-gradient(circle at 15% 10%,#ffe1ea 0 12%,transparent 30%),linear-gradient(145deg,#fffaf7,#ffeef3 55%,#fce1ec); min-height:100vh; overflow-x:hidden; }
+    .wrap { width:min(1000px,92%); margin:auto; padding:28px 0 55px; position:relative; z-index:1; }
+    .top { display:flex; justify-content:space-between; align-items:center; gap:16px; font-size:.9rem; opacity:.8; }
+    .brand { font-weight:800; letter-spacing:.5px; }
+    .pill { border:1px solid #ffffffaa; background:#ffffff80; padding:9px 14px; border-radius:999px; backdrop-filter:blur(10px); }
+    .hero { min-height:74vh; display:grid; place-items:center; text-align:center; padding:55px 0 28px; }
+    .hero-inner { max-width:720px; }
+    .eyebrow { color:var(--rose-dark); font-weight:700; font-size:1rem; }
+    h1 { margin:14px 0 10px; font-size:clamp(3.3rem,12vw,7.5rem); line-height:.95; font-weight:900; letter-spacing:-4px; }
+    h1 span { color:var(--rose); text-shadow:5px 7px 0 #ffffffb5; }
+    .lead { font-size:clamp(1.05rem,2.5vw,1.35rem); line-height:1.9; margin:0 auto 28px; max-width:600px; }
+    .heart { font-size:4rem; animation:float 3s ease-in-out infinite; filter:drop-shadow(0 10px 13px #d7608244); }
+    .countdown { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin:24px auto 30px; }
+    .unit { min-width:82px; padding:14px 12px; border-radius:20px; background:#ffffffaa; border:1px solid #fff; box-shadow:0 10px 30px #b7466d14; }
+    .unit b { display:block; font-size:1.8rem; color:var(--rose-dark); }
+    .unit small { opacity:.7; }
+    button { border:0; cursor:pointer; font:inherit; color:white; background:linear-gradient(135deg,var(--rose),var(--rose-dark)); padding:14px 24px; border-radius:999px; box-shadow:0 12px 25px #b7466d3d; transition:.2s transform,.2s box-shadow; }
+    button:hover { transform:translateY(-3px); box-shadow:0 16px 30px #b7466d55; }
+    section { margin:26px 0; }
+    .card { background:#ffffff9c; border:1px solid #fff; box-shadow:0 20px 55px #9a52631c; border-radius:30px; padding:clamp(24px,5vw,52px); backdrop-filter:blur(12px); }
+    .letter { display:none; text-align:center; line-height:2.1; font-size:1.1rem; animation:appear .6s ease; }
+    .letter.show { display:block; }
+    .letter h2 { color:var(--rose-dark); margin-top:0; }
+    .reasons { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .reason { padding:24px 18px; border-radius:22px; background:#fff8f4c7; text-align:center; }
+    .reason .ico { font-size:2rem; }
+    .reason h3 { margin:10px 0 7px; }
+    .reason p { margin:0; line-height:1.7; opacity:.8; font-size:.94rem; }
+    .quote { text-align:center; font-size:clamp(1.4rem,3vw,2rem); line-height:1.8; color:var(--rose-dark); }
+    .song { text-align:center; }
+    .song h2 { color:var(--rose-dark); margin-top:0; }
+    .song iframe { width:100%; max-width:650px; height:152px; border:0; border-radius:14px; display:block; }
+    footer { text-align:center; opacity:.6; margin-top:30px; }
+    .note { text-align:center; font-size:.78rem; opacity:.55; margin:22px 0 0; }
+    .float-heart { position:fixed; bottom:-30px; pointer-events:none; opacity:0; animation:rise 7s linear forwards; z-index:0; }
+    @keyframes float { 50% { transform:translateY(-11px) rotate(3deg); } }
+    @keyframes rise { 0% { transform:translateY(0) scale(.7) rotate(0); opacity:0; } 15% { opacity:.7; } 100% { transform:translateY(-110vh) scale(1.4) rotate(35deg); opacity:0; } }
+    @keyframes appear { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+    @media (max-width:650px) { .top { font-size:.78rem; } .reasons { grid-template-columns:1fr; } h1 { letter-spacing:-2px; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top"><div class="brand">هدية صغيرة من قلب كبير</div><div class="pill">إلى ريمو 🤍</div></div>
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="heart">♡</div>
+        <div class="eyebrow">في يومك المميز، حبيت أقولك...</div>
+        <h1>يا <span>ريمو</span></h1>
+        <p class="lead">وجودك في حياتي مش مجرد صدفة حلوة؛ إنتِ الحتة اللي بتخلّي كل يوم أحنّ وأجمل.</p>
+        <div class="countdown" aria-label="العد التنازلي">
+          <div class="unit"><b id="days">--</b><small>يوم</small></div><div class="unit"><b id="hours">--</b><small>ساعة</small></div><div class="unit"><b id="minutes">--</b><small>دقيقة</small></div><div class="unit"><b id="seconds">--</b><small>ثانية</small></div>
+        </div>
+        <button id="openLetter">افتحي رسالتي ✨</button>
+      </div>
+    </div>
+
+    <section id="letter" class="card letter">
+      <h2>ريمو حبيبتي،</h2>
+      <p>كل سنه وانت طيبه يا أحلى حاجه في حياتي وديما معايا إن شاء الله. عارف إن أنا وإنتِ مش عارفين نتكلم، بس حابب أأكد ليكي إنك مش بتغيبي عن بالي لحظة، وديما في بالي كل دقيقة، وديما بفكر فيكي وبحاول أعمل اللي يبسطك، وإن شاء الله أقدر ديما أعمل كده.</p>
+      <p>وكنت حابب أقولك إني مش بحب ولا هحب حد غيرك، عشان إنتِ اللي شغلتي بالي يملكه 😉😉</p>
+      <p>وفي الآخر عايز أقولك إني بحبك أويييييي ومستنيكي، ومتخفيش من أي حاجه قدام، أنا معاكي. بحبكككك😘😘😘❤️❤️</p>
+    </section>
+
+    <section class="card">
+      <div class="quote">«إنتِ مش بس حبيبتي... إنتِ البيت اللي قلبي بيرتاح فيه.»</div>
+    </section>
+
+    <section class="card song">
+      <h2>أغنيتنا 🎶</h2>
+      <iframe src="https://open.spotify.com/embed/track/2HtFhMMHqwdobOT1DQC0Iu?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+
+    <section class="reasons">
+      <div class="reason"><div class="ico">🌷</div><h3>ضحكتك</h3><p>بتعرف تغيّر شكل اليوم كله في ثانية.</p></div>
+      <div class="reason"><div class="ico">✨</div><h3>روحك</h3><p>فيها طيبة وحنية مفيش زيهم.</p></div>
+      <div class="reason"><div class="ico">🫶</div><h3>وجودك</h3><p>أجمل حاجة حصلتلي ولسه بتتكرر كل يوم.</p></div>
+    </section>
+    <footer>صُنعت بحب مخصوص لريمو • كل سنة وإنتِ طيبة 🤍</footer>
+    <p class="note">ملحوظة: أول مرة أعرف إني بعرف أكتب الكلام ده 🙂🙂🙂</p>
+  </main>
+
+  <script>
+    // التاريخ الموجود هنا هو 30 سبتمبر 2026 لأن 31 سبتمبر غير موجود في التقويم.
+    // لو تقصد تاريخًا آخر، غيّر السطر التالي فقط.
+    const birthday = new Date('2026-09-30T00:00:00');
+    const ids = ['days','hours','minutes','seconds'];
+    function updateCountdown() {
+      let diff = Math.max(0, birthday - new Date());
+      const values = [Math.floor(diff/86400000), Math.floor(diff/3600000)%24, Math.floor(diff/60000)%60, Math.floor(diff/1000)%60];
+      ids.forEach((id,i) => document.getElementById(id).textContent = String(values[i]).padStart(2,'0'));
+    }
+    updateCountdown(); setInterval(updateCountdown,1000);
+    document.getElementById('openLetter').addEventListener('click', () => {
+      document.getElementById('letter').classList.add('show');
+      document.getElementById('letter').scrollIntoView({behavior:'smooth', block:'center'});
+      for(let i=0;i<18;i++) setTimeout(() => { const h=document.createElement('span'); h.className='float-heart'; h.textContent=['♥','♡','✨'][Math.floor(Math.random()*3)]; h.style.left=Math.random()*100+'vw'; h.style.color=['#e86f92','#b7466d','#e8b86a'][Math.floor(Math.random()*3)]; h.style.fontSize=(16+Math.random()*22)+'px'; h.style.animationDelay=(Math.random()*.8)+'s'; document.body.appendChild(h); setTimeout(()=>h.remove(),8000); }, i*80);
+    });
+  </script>
+</body>
+</html>
